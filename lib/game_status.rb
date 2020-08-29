@@ -23,6 +23,6 @@ def won?(board)
     return false
 
   elsif board.select {|positions| positions == WIN_COMBINATIONS}
-    return positions.to_a
+    return board.to_a
 end
 end
