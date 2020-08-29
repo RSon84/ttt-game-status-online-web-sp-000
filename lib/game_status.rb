@@ -27,7 +27,7 @@ end
 end
 
 def draw
-  if board != empty_board && board != won?
+  if board != empty_board && != won?(board)
     return true
   end
 end
