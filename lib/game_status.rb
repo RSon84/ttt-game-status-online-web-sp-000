@@ -40,9 +40,7 @@ def over?(board)
 end
 
 def winner(board)
-  if won?(board)
-    puts position_taken?(board, array[0]
-  else
-    nil
+  if positions = won?(board)
+    board[positions.first]
   end
 end
