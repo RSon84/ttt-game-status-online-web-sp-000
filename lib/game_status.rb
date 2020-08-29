@@ -30,3 +30,9 @@ def full_board?
   if board.all? {|positions| positions == "X" || positions == "O"}
   end
 end
+
+def draw?
+  if full_board? && !won?(board)
+    return true
+  end
+end
