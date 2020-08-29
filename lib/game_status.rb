@@ -17,7 +17,7 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8],
 
 empty_board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-  
+
 def won?(board)
 WIN_COMBINATIONS.detect do |array|
   board[array[0]] == board[array[1]] &&
@@ -25,5 +25,3 @@ WIN_COMBINATIONS.detect do |array|
   position_taken?(board, array[0])
 end
 end
-
-
