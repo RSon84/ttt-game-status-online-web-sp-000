@@ -34,4 +34,4 @@ end
 def draw?
   full_board? && !won?(board)
   end
-end
+
