@@ -38,3 +38,11 @@ def draw?(board)
 def over?(board)
   won?(board) || draw?(board)
 end
+
+def winner(board)
+  if won?(board)
+    puts position_taken?(board, array[0]
+  else
+    nil
+  end
+end
