@@ -21,6 +21,6 @@ def won?(board)
   elsif board.select do |positions|
     postions.any? == WIN_COMBINATIONS
 
-
+end
 end
 end
