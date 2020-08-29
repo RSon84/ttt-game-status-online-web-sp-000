@@ -25,3 +25,9 @@ WIN_COMBINATIONS.detect do |array|
   position_taken?(board, array[0])
 end
 end
+
+def draw
+  if board != empty_board && board != won?(board)
+    return true
+  end
+end
