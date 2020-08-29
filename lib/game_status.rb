@@ -20,7 +20,8 @@ def won?(board)
     return false
   elsif
     board.select do |index|
-      index.all? == "X" || "Y"
+      index.any? != WIN_COMBINATIONS
+      return false
   end
 end
 end
