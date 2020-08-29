@@ -15,14 +15,15 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8],
 [0,4,8], [2,4,6],
 [0,3,6], [1,4,7], [2,5,8]]
 
-def won?(board)
-  if board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
-    return false
-  elsif board.all?  {|positions| positions == "X" || "Y"} &&
-    board.any? {|positions| positions != WIN_COMBINATIONS}
-    return false
+empty_board = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
 
-  elsif board.select {|positions| positions == WIN_COMBINATIONS}
-    return board.to_a
+  
+def won?(board)
+WIN_COMBINATIONS.detect do |array|
+  board[array[0]] == board[array[1]] &&
+  board[array[1]] == board[array[2]] &&
+  position_taken?(board, array[0])
 end
 end
+
+
