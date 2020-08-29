@@ -27,7 +27,7 @@ end
 end
 
 def full_board?
-  if board.any? {|positions| positions != "" || " "}
+  if board.all? {|positions| positions == "X" || "O"}
     return true
   end
 end
