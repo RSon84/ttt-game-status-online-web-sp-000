@@ -32,7 +32,6 @@ def full_board?
 end
 
 def draw?
-  if full_board? && !won?(board)
-    return true
+  full_board? && !won?(board)
   end
 end
