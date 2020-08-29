@@ -26,6 +26,11 @@ WIN_COMBINATIONS.detect do |array|
 end
 end
 
+def full_board?
+  if board.all? {|positions| positions == "X" || "Y"}
+  end
+end
+
 def draw
   if board != empty_board && !won?(board)
     return true
