@@ -26,7 +26,7 @@ WIN_COMBINATIONS.detect do |array|
 end
 end
 
-def full_board?
+def full?(board)
   board.all? {|positions| positions == "X" || positions == "O"}
   end
 
