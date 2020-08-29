@@ -1,3 +1,4 @@
+require "pry"
 # Helper Method
 0  | 1  | 2
 -----------
