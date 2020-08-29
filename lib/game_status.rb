@@ -22,6 +22,7 @@ def won?(board)
     board.any? {|positions| positions != WIN_COMBINATIONS}
     return false
 
-  elsif board.select.to_a {|positions| positions == WIN_COMBINATIONS}
+  elsif board.select {|positions| positions == WIN_COMBINATIONS}
+    return positions.to_a
 end
 end
