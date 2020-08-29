@@ -18,6 +18,9 @@ WIN_COMBINATIONS = [[0,1,2], [3,4,5], [6,7,8],
 def won?(board)
   if board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     return false
+  elsif board.all?  {|positions| positions == "X" || "Y"} && 
+    board.any? {|positions| positions == "X" || "Y"}
+    
   elsif board.select do |positions|
     postions.any? == WIN_COMBINATIONS
 
