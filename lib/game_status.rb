@@ -19,7 +19,8 @@ def won?(board)
   if board == [" ", " ", " ", " ", " ", " ", " ", " ", " "]
     return false
   elsif board.all?  {|positions| positions == "X" || "Y"} &&
-    board.any? {|positions| positions == "X" || "Y"}
+    board.any? {|positions| positions != WIN_COMBINATIONS}
+    return false
 
   elsif board.select do |positions|
     postions.any? == WIN_COMBINATIONS
