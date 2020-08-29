@@ -25,5 +25,4 @@ def won?(board)
   elsif board.select {|positions| positions.is_a?(WIN_COMBINATIONS)}
 end
 end
-end
-end
+
