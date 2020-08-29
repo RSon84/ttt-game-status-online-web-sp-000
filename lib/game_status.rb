@@ -41,6 +41,7 @@ end
 
 def winner(board)
   if positions = won?(board)
+  binding.pry
     board[positions.first]
   end
 end
